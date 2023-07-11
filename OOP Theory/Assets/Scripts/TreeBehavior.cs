@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TreeBehavior : MonoBehaviour
 {
     public float treeHealth = 100.0f;
     public int woodQuantity = 10;
     protected bool isHarvestable = false; // ENCAPSULATION
+    public TextMeshProUGUI woodText;
+    public GameManager gameManager;
+
+    void Awake() {
+        woodText = GameObject.Find("WoodCount").GetComponent<TextMeshProUGUI>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     void Update()
     {
@@ -22,6 +30,8 @@ public class TreeBehavior : MonoBehaviour
         if(isHarvestable) {
             Destroy(gameObject);
             DataManager.Instance.wood += woodQuantity;
+            gameManager.UpdateUI(DataManager.Instance.wood);
         }
     }
 }
+
