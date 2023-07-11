@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 883158559}
   - component: {fileID: 883158558}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -665,6 +665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778f97c4c27f4ec46aeb88522502cca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: {fileID: 1974413658}
+  woodCount: {fileID: 0}
 --- !u!4 &883158559
 Transform:
   m_ObjectHideFlags: 0
@@ -979,6 +981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9271fe03289d44fb6ffa14741e061a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wood: 0
+  playerName: 
 --- !u!4 &1023047624
 Transform:
   m_ObjectHideFlags: 0
